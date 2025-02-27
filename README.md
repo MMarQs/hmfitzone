@@ -23,7 +23,7 @@ Identify the entities, attributes, and relationships of the database.
 | **Produto**            | Código, Nome, Preço, Taxa de IVA, Stock     | Vários produtos estão armazenado num armazém (N:1)|
 | **Armazém**            |                                ||
 | **Item de Encomenda**  | Quantidade                     ||
-| **Encomenda**          | Número de Encomenda, Data      |Tem 1 ou mais items de um produto (M:N) via Item de Encomenda <br> Cada encomenda tem um único fornecedor (N:1)|
+| **Encomenda**          | Número de Encomenda, Data      |· Tem 1 ou mais items de um produto (M:N) via Item de Encomenda <br> · Cada encomenda tem um único fornecedor (N:1)|
 | **Fornecedor**         | Nome, NIF, Endereço, Número de Fax|Cada fornecedor tem a sua condição de pagamento (N:1)|
 | **Condições de Pagamento** | Código, Designação         | 1 condição de pagamento pode estar associada a mais do que 1 fornecedor (1:N)|
 | **Tipo de Fornecedor** | Código do Tipo de Fornecedor, Designação |A cada fornecedor é associado um tipo de fornecedor (1:N)|
