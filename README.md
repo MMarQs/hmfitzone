@@ -33,10 +33,15 @@ Identify the entities, attributes, and relationships of the database.
 #### *b)* Caracterize as relações quanto ao grau, cardinalidade e obrigatoriedade de participação das instâncias das entidades no relacionamento.
 Specify the relationships regarding the degree, cardinality and instances mandatory participation of the entities in the relationship.
 
-```
-... Write here your answer ...
+| Relacionamento        | Entidades Envolvidas         | Grau | Cardinalidade        | Obrigatoriedade            |
+|----------------------|----------------------------|------|----------------------|----------------------------|
+| **Comercializa**     | Empresa - Produto          | Binário | 1 : N               | · Empresa (Obrigatória) - cada produto precisa de estar associado a uma empresa <br> · Produto (Opcional) - um produto pode ainda não estar comercializado|
+| **Estão**           | Produto - Armazém          | Binário | N : 1               | · Produto (Obrigatório) - a existência de um produto implica que ele esteja armazenado em algum lugar <br> · Armazém (Opcional) - um armazém pode existir sem produtos armazenados |
+| **Item**            | Encomenda - Produto        | Binário | M : N               | Ambas Obrigatórias - ambos os lados são obrigatórios, pois uma encomenda deve ter pelo menos um produto, e um produto só existe nesse relacionamento se estiver presente em pelo menos uma encomenda.         |
+| **Tem**             | Encomenda - Fornecedor     | Binário | N : 1               | · Encomenda (Obrigatória) - precisa de estar associada a um fornecedor <br> · Fornecedor (Opcional) - pode existir sem necessariamente ter uma encomenda |
+| **Tem**             | Fornecedor - Condições de Pagamento | Binário | N : 1  | · Fornecedor (Obrigatório) - precisa de uma condição de pagamento <br>· Condições de Pagamento (Opcional) - pode existir independentemente de um fornecedor específico |
+| **É**              | Fornecedor - Tipo de Fornecedor | Binário | N : 1  | · Fornecedor (Obrigatório) - precisa ter um tipo <br> · Tipo de Fornecedor (Opcional) - pode existir mesmo sem fornecedores|
 
-```
 
 #### *c)* Desenvolva o desenho conceptual da base de dados com recurso a um diagrama entidade-relacionamento. Numa primeira fase, utilize lápis e papel para realizar o trabalho. Uma vez concluído o desenho em papel, transponha o diagrama para um formato eletrónico utilizando uma ferramenta gráfica como, por exemplo, o Microsoft Visio ou o Visual Paradigm.
 
